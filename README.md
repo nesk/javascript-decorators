@@ -188,7 +188,7 @@ var Foo = (function () {
   class Foo {
   }
 
-  Foo = F("color")(Foo = G(Foo) || Foo) || Foo;
+  Foo = G(Foo = F("color")(Foo) || Foo) || Foo;
   return Foo;
 })();
 ```
@@ -200,7 +200,7 @@ var Foo = (function () {
   function Foo() {
   }
 
-  Foo = F("color")(Foo = G(Foo) || Foo) || Foo;
+  Foo = G(Foo = F("color")(Foo) || Foo) || Foo;
   return Foo;
 })();
 ```
